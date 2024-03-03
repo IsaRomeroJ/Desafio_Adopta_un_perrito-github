@@ -1,14 +1,9 @@
-import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge'
 
-function Tags({ raza, color }) {
+const Tags = ({color,tag}) => {
   return (
-    <div className="d-grid mt-auto">
-      <Button href="#" variant={color} size="sm">
-        {raza}
-      </Button>
-    </div>
-
-  );
+    <h5><Badge bg={color} style={{width:'220px'}}>{tag}</Badge></h5>
+  )
 }
 
-export default Tags;
+export default Tags

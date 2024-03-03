@@ -1,68 +1,46 @@
-import './App.css'
-import Header from './components/Header'
-import Card from './components/Card'
-import Footer from './components/Footer'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header";
+import MyCard from "./components/MyCard";
+import Footer from "./components/Footer";
 
-
-function App() {
-  
-  const perritos = [
-    {
-      id: 1,
-      url: 'https://images.pexels.com/photos/3763313/pexels-photo-3763313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      nombre: 'Manchas',
-      descripcion:
-        'El Manchas es muy enérgico, jugueton y sensible. Los dalmatas son fieles a su familia y se llevan bien con los niños.',
-      raza: 'Dálmata',
-      colorTag: 'primary',
-    },
-    {
-      id: 2,
-      url: 'https://images.pexels.com/photos/248307/pexels-photo-248307.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      nombre: 'Leon',
-      descripcion:
-        'Leon es de temperamento apacible, inteligente y cariñoso. Los golden retrievers son juguetones y dóciles con los niños.',
-      raza: 'Golden Retriever',
-      colorTag: 'warning',
-    },
-    {
-      id: 3,
-      url: 'https://images.pexels.com/photos/257519/pexels-photo-257519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      nombre: 'Tiburon',
-      descripcion:
-        'Tiburon es un perro de familia, es un leal compañero y bueno perro vigía. A pesar de su tamaño, el Dachshund es conocido por su naturaleza valiente.',
-      raza: 'Dachshund',
-      colorTag: 'success',
-    },
-    {
-      id: 4,
-      url: 'https://images.pexels.com/photos/374906/pexels-photo-374906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      nombre: 'Pulga',
-      descripcion:
-        'Pluga es un perro tranquilo, no suele ladrar mucho, ni cavar, ni masticar. Los Pug disfrutan la compañía  y pueden ser cariñosos.',
-      raza: 'Pug',
-      colorTag: 'danger',
-    },
-  ];
-
+const App = () => {
   return (
     <>
-      <Header titulo="Adopta un Perrito" />
-
-      <main className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-        {perritos.map((perrito) => (
-          <Card
-            key={perrito.id}
-            urlImagen={perrito.url}
-            nombre={perrito.nombre}
-            descripcion={perrito.descripcion}
-            raza={perrito.raza}
-            color={perrito.colorTag}
-          />
-        ))}
-      </main>
+      <Header titulo="ADOPTA UN PERRITO" />
+      <section className="MyCards">
+        <MyCard
+          imagen="https://images.pexels.com/photos/3726315/pexels-photo-3726315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          nombre="Bartolo"
+          descripcion="Lleno de energía y listo para jugar. ¡Dale a Bartolo el hogar amoroso que se merece!"
+          color="success"
+          tag="Husky"
+        />
+        <MyCard
+          imagen="https://images.pexels.com/photos/1938125/pexels-photo-1938125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          nombre="Messi"
+          descripcion="Es juguetón, amigable y se lleva bien con niños y otros animales. ¡Haz de Messi parte de tu familia hoy mismo!"
+          color="primary"
+          tag="Border Collie"
+        />
+        <MyCard
+          imagen="https://images.pexels.com/photos/12287391/pexels-photo-12287391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          nombre="Gohan"
+          descripcion="Un perro de tamaño mediano con un corazón gigante. Hazte amigo de Gohan y experimenta un amor incondicional!"
+          color="danger"
+          tag="Shar Pei"
+        />
+        <MyCard
+          imagen="https://images.pexels.com/photos/4203281/pexels-photo-4203281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          nombre="Princesa"
+          descripcion="Es una compañera leal y cariñosa que adora los mimos y los abrazos. ¡Ayuda a Princesa a encontrar su final feliz!"
+          color="warning"
+          tag="Beagle"
+        />
+      </section>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

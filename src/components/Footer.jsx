@@ -1,10 +1,7 @@
-import './Footer.css';
-
 const Footer = () => {
   return (
-    <>
-      <footer>
-        <p className="my-4">
+    <footer>
+      <p className="my-4">
           Explora nuestra galería de adopción de perros para encontrar a tu
           compañero perfecto. Tenemos una variedad de perros con diferentes
           personalidades y tamaños, todos en busca de hogar amoroso. Cada imagen
@@ -16,8 +13,10 @@ const Footer = () => {
           <a href="#"><i className="fa-brands fa-instagram"></i></a>
           <a href="#"><i className="fa-brands fa-whatsapp"></i></a>
         </div>
-      </footer>
-    </>
+        <p>
+          ©2024 Todos los derechos reservados - Adopta Perrito
+        </p>
+    </footer>
   );
 };
 

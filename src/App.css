@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+.MyCards{
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+}

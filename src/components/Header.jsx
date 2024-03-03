@@ -1,15 +1,9 @@
-import './Header.css';
-
-function Header({ titulo }) {
+const Header = ({titulo}) => {
   return (
-    <>
-      <header className="py-3">
-        <div>
-          <h1>{titulo}</h1>
-        </div>
-      </header>
-    </>
-  );
+    <header>
+      <h1>{titulo}</h1>
+    </header>
+  )
 }
 
-export default Header;
+export default Header
